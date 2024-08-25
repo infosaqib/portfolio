@@ -9,11 +9,8 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "bin/www"
+        "dest": "/"
       }
-    ],
-    "env": {
-      "NODE_ENV": "production"
-    }
+    ]
   }
   
