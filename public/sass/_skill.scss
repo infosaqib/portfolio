@@ -1,0 +1,132 @@
+@use "variables" as *;
+
+
+.skills_section {
+  margin-block: 2.5em;
+    &_head {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h1 {
+        font-size: 3.5em;
+        color: var(--dark-clr);
+      }
+      p{
+        color: var(--dark-clr);
+        width: max-content;
+        font-size: 0.8em;
+        margin-block: 2em;
+        border-bottom: 1px solid $light-grey;
+        border-top: 1px solid $light-grey;
+        padding: 5px;
+      }
+      h5{
+        font-size: 1.1em;
+        line-height: 1.6em;
+        font-weight: 500;
+        color: var(--dark-grey);
+        width: 35em;
+        text-align: center;
+      }
+      h5:last-child{
+        margin-block: 10px;
+        font-size: 1em;
+        b{
+          color: var(--dark-clr);
+        }
+      }
+    }
+    &_icons{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      margin-block: 3em;
+      max-width: fit-content;
+      margin-inline: auto;
+      gap: 4em;
+      .icon{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        p{
+          font-weight: 500;
+          color: var(--dark-grey);
+          font-size: 1em;
+        }
+        .img-cont{
+          background: #000;
+          border: 1px solid var(--dark-clr);
+          width: 6em;
+          height: 6em;
+          border-radius: 50%;
+          padding: 0.5em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img, svg{
+            height: 3.5em;
+          }
+        }
+      }
+    }
+  }
+
+
+  @include breakpoint(large){
+    .skills_section{
+        &_head{
+            h1{
+                font-size: 2.5em;
+            }
+        }
+        &_icons{
+           gap: 2em;
+            .icon{
+                .img-cont{
+                width:3.5em ;
+                height:3.5em ;
+                img{
+                    object-fit: cover;
+                    height: 2.25em;
+                }
+            }
+        }
+        }
+    }
+  }
+
+  @include breakpoint(small){
+    .skills_section{
+      &_head{
+        h1{
+          font-size: 2.5em;
+          text-align: center;
+        }
+        p{
+          font-size: 0.75em;
+        }
+        h5{
+          font-size: 1em;
+          text-align: center;
+          width: calc(95% - 10px);
+          font-weight: 500;
+        }
+
+        h5:last-child{
+          font-size: 0.85em;
+          text-align: center;
+        }
+      }
+      &_icons{
+        grid-template-columns: repeat(3, 1fr);
+        .icon{
+          p{
+            font-size: 0.8em;
+            color: var(--dark-clr);
+          }
+        }
+      }
+    }
+  }

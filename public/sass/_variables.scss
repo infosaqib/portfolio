@@ -1,0 +1,49 @@
+$light-grey: #bababa;
+// $shadow: 18px 0px 87px 0px rgba(9.999999999999996, 15.000000000000034, 70, 0.07);
+$web-clr: #854fee;
+$font: Helvetica Neue, Helvetica, Arial, sans-serif;
+$shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  &-col-justify {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+//Media Queries
+
+$breakpoints-up: (
+  "small": 23.4375em,
+  //375px
+  "medium": 48em,
+  //768px
+  "large": 64em,
+  //1024ppx
+  "xlarge": 90em,
+  //1440px
+);
+
+@mixin breakpoint($size) {
+  @media (max-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}

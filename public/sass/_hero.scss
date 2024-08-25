@@ -1,0 +1,150 @@
+@use "variables" as *;
+.hero_section {
+  // display: flex;
+  // flex-direction: row;
+  // align-items: center;
+  // justify-content: space-between;
+  padding: 4.5em 1.5em;
+  &_container {
+    width: 100%;
+    gap: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    &_info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      width: 50%;
+      &_text {
+        display: flex;
+        flex-direction: column;
+        h1 {
+          font-size: 3.5em;
+          max-width: 5em;
+          color: var(--dark-clr);
+        }
+        p {
+          width: max-content;
+          font-size: 0.8em;
+          margin-block: 2em;
+          border-bottom: 1px solid $light-grey;
+          border-top: 1px solid $light-grey;
+          color: var(--dark-clr);
+          padding: 5px;
+        }
+        h5 {
+          font-size: 1.15em;
+          font-weight: 500;
+          color: var(--dark-grey);
+          line-height: 1.6em;
+          font-weight: 500;
+        }
+      }
+      &_buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5em;
+        padding-block: 1.75em;
+        font-size: 1.1rem;
+        width: 50%;
+        .hire-btn {
+          background-color: var(--dark-clr);
+          color: var(--light-clr);
+          text-decoration: none;
+          padding: 1em 1.25em;
+          border-radius: 100px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          cursor: pointer;
+        }
+        .project-btn {
+          background-color: var(--Xlight-grey);
+          color: var(--dark-grey);
+        }
+      }
+    }
+    &_anime {
+      video {
+        width: 100%;
+        height: 350px;
+      }
+    }
+  }
+}
+
+@include breakpoint(large) {
+  .hero_section {
+    flex-direction: column-reverse;
+    width: 100%;
+    &_img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        width: 100%;
+      }
+    }
+    &_info,
+    &_img {
+      width: 100%;
+    }
+  }
+}
+@include breakpoint(small) {
+  .hero_section {
+    padding: 1.5em 0;
+    &_container{
+      flex-direction: column-reverse;
+      gap: 2em;
+    &_info {
+      width: 100%;
+      &_text {
+        width: calc(100% - 10px);
+        justify-content: center;
+        align-items: center;
+        h1,
+        p,
+        h5 {
+          text-align: center;
+        }
+        h1 {
+          max-width: 100%;
+          font-size: 2.5em;
+        }
+        p {
+          font-size: 0.75em;
+          display: inline-flex;
+          overflow-wrap: break-word;
+          width: fit-content;
+        }
+        h5 {
+          font-size: 1em;
+          font-weight: 500;
+        }
+      }
+      &_buttons {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        .hire-btn,
+        .project-btn {
+          padding: 0.75em 1em;
+          text-align: center;
+        }
+        .project-btn {
+          background-color: var(--Xlight-grey);
+          color: var(--dark-grey);
+        }
+      }
+    }
+    &_anime{
+      width: 100%;
+      video{
+        height: 200px;
+      }
+    }
+  }
+}}

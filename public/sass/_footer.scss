@@ -1,0 +1,54 @@
+@use "variables" as *;
+
+footer {
+    background-color: #111b22;
+    height: 11em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+.social-icons {
+    padding: 20px;
+    gap: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    img {
+      cursor: pointer;
+      filter: invert(100%);
+      height: 2rem;
+      transition: all ease 0.35s;
+      &:hover {
+        scale: 1.15;
+      }
+    }
+  }
+
+    p {
+      font-family: "Matter", sans-serif;
+      font-size: 1.3rem;
+      color: #fff;
+      padding: 10px 0;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      font-weight: 400;
+      font-style: italic;
+    }
+  }
+  @include breakpoint(large){
+    .social-icons{
+        gap: 1.5em;
+    }
+  }
+  @include breakpoint(medium){
+    footer p, .con-btn {
+        font-size: 1rem;
+      }
+  }
+  @include breakpoint(small){
+    .social-icons{
+        gap: 1.2em;
+    }
+  }

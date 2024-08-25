@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-------- META TAGS  -------->
+    <meta name="description"
+        content="Crafting innovative web solutions that seamlessly integrate creativity with functionality,
+        delivering captivating digital experiences">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://hafizsaqib.com/">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="<%= title %>">
+    <meta property="og:description"
+        content="Crafting innovative web solutions that seamlessly integrate creativity with functionality,
+        delivering captivating digital experiences">
+    <meta property="og:url" content="https://hafizsaqib.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/hafiz.jpg">
+    <title><%= title %></title>
+    <!-- Favicon link -->
+    <link rel="icon" href="assets/images/hafiz.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/hafiz.jpg" type="image/x-icon">
+    <!------- JSON - LD ---------->
+    <script type="application/ld+json">
+           {
+             "@context": "https://schema.org",
+             "@type": "WebSite",
+             "name": "<%= title %>",
+             "url": "https://hafizsaqib.com/",
+             "potentialAction": {
+               "@type": "SearchAction",
+               "target": "https://hafizsaqib.com/search?query={search_term_string}",
+               "query-input": "required name=search_term_string"
+             }
+           }
+           </script>
+    <!-------- Stylesheets  -------->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/swiper.css">
+    <link rel="stylesheet" href="/stylesheets/hamburgers.css">
+    <link rel="stylesheet" href="/stylesheets/button.css">
+    <!-------- SCRIPTS  -------->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+
+
+ 
+</head>
+
+<body>
+
+    <!--! ABSOLUTE CONTENT  -->
+    <div id="overlay" onclick="hideMenu()"></div>
+    <!--! HEADER SECTION  -->
+    <header class="header">
+        <div class="logo">Hafiz Saqib</div>
+        <div class="links-container">
+            <ul id='sidebar'>
+                <li><a href="#hero"><span> Home</span></a></li>
+                <li><a href="#about"><span> About</span></a></li>
+                <li><a href="#portfolio"><span> Projects</span></a></li>
+                <li><a href="#skill"><span> Skills</span></a></li>
+                <li><a href="#testimonials"><span> Testimonials</span></a></li>
+                <li><a href="#contact"><span> Contact</span></a></li>
+                <div class="resume"> <a href="assets/docs/resume.pdf">Resume</a></div>
+            </ul>
+        </div>
+        <div class="right-header">
+
+            <div class="resume"> <a href="images/resume.pdf">Resume</a></div>
+            <div class="mode">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                </svg>
+            </div>
+            <button id="menubar" class="hamburger hamburger--squeeze" onclick="toggleMenu(this)" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <!--! HERO SECTION  -->
+        <section class="hero_section" id="hero">
+            <div class="hero_section_container">
+                <div class="hero_section_container_info">
+                    <div class="hero_section_container_info_text">
+                        <h1>Full Stack Developer</h1>
+                        <p>Elevating User Experiences with Creative UI/UX Design.</p>
+                        <h5>Crafting innovative web solutions that seamlessly integrate creativity with functionality,
+                            delivering captivating digital experiences.</h5>
+                    </div>
+                    <div class="hero_section_container_info_buttons">
+                        <a href="#contact" class="hire-btn">Hire me</a>
+                        <a href="#portfolio" class="project-btn hire-btn">Projects</a>
+                    </div>
+                </div>
+                <div class="hero_section_container_anime">
+                    <video id="videoAnime" oncontextmenu=" return false" autoplay loop playsinline muted
+                        poster="assets/images/cube.png" src="assets/videos/silver_white.mp4"></vid>
+                </div>
+            </div>
+        </section>
+        <!--! ABOUT SECTION  -->
+        <section id="about" class="flex-col">
+
+            <div id="about-container" class=" flex">
+                <div class="left-abt flex" data-aos="fade-up">
+                    <div class="image-con flex">
+                        <div class="own-view flex">
+                            <img src="assets/images/cod.webp" alt="" class="imag">
+                        </div>
+                        <div class="flex-row">
+                            <img class="fav-icon"
+                                src="//upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/512px-Sass_Logo_Color.svg.png">
+                            <img class="fav-icon" src="assets/images/tailwind.webp">
+                            <img class="fav-icon" src="assets/icons/bootstrap.svg">
+                            <img class="fav-icon" src="assets/icons/react.svg">
+                            <img class="fav-icon" src="assets/images/html.webp">
+                            <img class="fav-icon" src="assets/images/css.webp">
+                            <img class="fav-icon" src="assets/images/js.webp">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="right-abt" data-aos="fade-up">
+                    <div class="abt-cont">
+                        <h2>About Me</h2>
+                        <h1>I Can Provide Any type of Service</h1>
+                        <p>As a creative professional, I offer a range of services including whiteboard animation,
+                            digital
+                            marketing, landing page design, and portfolio web development. With a passion for
+                            storytelling
+                            and innovation, I help bring ideas to life through engaging visuals and strategic online
+                            solutions.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!--! PORTFOLIO SECTION  -->
+        <section class="portfolio_section" id="portfolio">
+            <h1>Portfolio</h1>
+            <div class="portfolio_section_buttons">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper mySwiper portfolio_section_container">
+                <div class="swiper-wrapper portfolio_collection">
+                    Portfolio cards here
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <!--! SKILLS SECTION  -->
+        <section class="skills_section" id="skill">
+            <div class="skills_section_head">
+                <h1>Skills & Experience</h1>
+                <p>The area of expertise is full stack development</p>
+                <h5>With extensive experience as both a full-stack and front-end developer, I specialize in crafting
+                    exceptional web experiences. Utilizing Next.js, Prisma, MongoDB, and React.js, I've built dynamic
+                    websites and frontend applications, showcasing proficiency in both back-end and front-end
+                    development.
+                </h5>
+                <h5>Visit my
+                    <b>Linkedin</b>
+                    for more details
+                </h5>
+            </div>
+            <div class="skills_section_icons">
+                <div class="icon">
+                    <div class="img-cont"><img src="assets/images/html5.png" alt="HTML"></div>
+                    <p>HTML</p>
+                </div>
+                <div class="icon">
+                    <div class="img-cont"><img src="assets/images/css3.png" alt="CSS"></div>
+                    <p>CSS</p>
+                </div>
+                <div class="icon">
+                    <div class="img-cont"><img src="assets/images/white.png" alt="SASS"></div>
+                    <p>SASS</p>
+                </div>
+                <div class="icon">
+                    <div class="img-cont"><img src="assets/images/tailwind.png" alt="Tailwind"></div>
+                    <p>Tailwind</p>
+                </div>
+                <div class="icon">
+                    <div class="img-cont"><img src="assets/icons/bootstrap-fill.svg" alt="bootstrap" style="
+                    filter: invert(1);
+                "></div>
+                    <p>Bootstrap</p>
+                </div>
+                <div class="icon">
+                    <div class="img-cont"><img src="assets/images/javascript.png" alt="JS"></div>
+                    <p>JavaScript</p>
+                </div>
+                <div class="icon">
+                    <div class="img-cont"><img src="assets/images/nodejs.png" alt="Node js"></div>
+                    <p>Node Js</p>
+                </div>
+                <div class="icon">
+                    <div class="img-cont"><img src="assets/images/express.png" alt="Express" style="
+                    filter: invert(1);
+                "></div>
+                    <p>Express Js</p>
+                </div>
+                <div class="icon">
+                    <div class="img-cont"><img src="assets/images/mongo.png" alt="MongoDB"></div>
+                    <p>MongoDB</p>
+                </div>
+                <div class="icon">
+                    <div class="img-cont"><img src="assets/images/git.png" alt="Git"></div>
+                    <p>Git</p>
+                </div>
+            </div>
+        </section>
+        <!--! TESTIMONIALS SECTION  -->
+        <section class="testimonials_section" id="testimonials">
+            <div class=" mySwiper testimonials_section_container">
+                <h2>Testimonials</h2>
+                <h1>What our customers say</h1>
+                <div class="swiper-wrapper testimonials_collection">
+                    <!--? Tesimonial cards here -->
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <!--! CONTACT SECTION  -->
+        <section class="contact_section" id="contact">
+            <div class="contact_section_heading">
+                <h1>Get in Touch</h1>
+            </div>
+            <div class="contact_section_body">
+                <form action="" class="contact_section_body_form">
+                    <div id="name">
+                        <label for="username">Name</label>
+                        <input type="text" name="username" placeholder="Enter your name">
+                    </div>
+                    <div id="email">
+                        <label for="email">Email address</label>
+                        <input type="text" name="email" placeholder="Enter your email">
+                    </div>
+                    <div id="message">
+                        <label for="message">How can we help?</label>
+                        <textarea name="message" cols="30" rows="10" placeholder="Type your message here..."></textarea>
+                    </div>
+                    <div id="button"><button type="submit">Submit
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <div class="contact_section_body_animation">
+                    <div class="animation-wrapper">
+                        <div class="sphere-animation">
+                            <svg class="sphere" viewBox="0 0 440 440" stroke="rgba(80,80,80,.35)">
+                                <defs>
+                                    <linearGradient id="sphereGradient" x1="5%" x2="5%" y1="0%" y2="15%">
+                                        <stop stop-color="#373734" offset="0%" />
+                                        <stop stop-color="#242423" offset="50%" />
+                                        <stop stop-color="#0D0D0C" offset="100%" />
+                                    </linearGradient>
+                                </defs>
+                                <path
+                                    d="M361.604 361.238c-24.407 24.408-51.119 37.27-59.662 28.727-8.542-8.543 4.319-35.255 28.726-59.663 24.408-24.407 51.12-37.269 59.663-28.726 8.542 8.543-4.319 35.255-28.727 59.662z" />
+                                <path
+                                    d="M360.72 360.354c-35.879 35.88-75.254 54.677-87.946 41.985-12.692-12.692 6.105-52.067 41.985-87.947 35.879-35.879 75.254-54.676 87.946-41.984 12.692 12.692-6.105 52.067-41.984 87.946z" />
+                                <path
+                                    d="M357.185 356.819c-44.91 44.91-94.376 68.258-110.485 52.149-16.11-16.11 7.238-65.575 52.149-110.485 44.91-44.91 94.376-68.259 110.485-52.15 16.11 16.11-7.239 65.576-52.149 110.486z" />
+                                <path
+                                    d="M350.998 350.632c-53.21 53.209-111.579 81.107-130.373 62.313-18.794-18.793 9.105-77.163 62.314-130.372 53.209-53.21 111.579-81.108 130.373-62.314 18.794 18.794-9.105 77.164-62.314 130.373z" />
+                                <path
+                                    d="M343.043 342.677c-59.8 59.799-125.292 91.26-146.283 70.268-20.99-20.99 10.47-86.483 70.269-146.282 59.799-59.8 125.292-91.26 146.283-70.269 20.99 20.99-10.47 86.484-70.27 146.283z" />
+                                <path
+                                    d="M334.646 334.28c-65.169 65.169-136.697 99.3-159.762 76.235-23.065-23.066 11.066-94.593 76.235-159.762s136.697-99.3 159.762-76.235c23.065 23.065-11.066 94.593-76.235 159.762z" />
+                                <path
+                                    d="M324.923 324.557c-69.806 69.806-146.38 106.411-171.031 81.76-24.652-24.652 11.953-101.226 81.759-171.032 69.806-69.806 146.38-106.411 171.031-81.76 24.652 24.653-11.953 101.226-81.759 171.032z" />
+                                <path
+                                    d="M312.99 312.625c-73.222 73.223-153.555 111.609-179.428 85.736-25.872-25.872 12.514-106.205 85.737-179.428s153.556-111.609 179.429-85.737c25.872 25.873-12.514 106.205-85.737 179.429z" />
+                                <path
+                                    d="M300.175 299.808c-75.909 75.909-159.11 115.778-185.837 89.052-26.726-26.727 13.143-109.929 89.051-185.837 75.908-75.908 159.11-115.778 185.837-89.051 26.726 26.726-13.143 109.928-89.051 185.836z" />
+                                <path
+                                    d="M284.707 284.34c-77.617 77.617-162.303 118.773-189.152 91.924-26.848-26.848 14.308-111.534 91.924-189.15C265.096 109.496 349.782 68.34 376.63 95.188c26.849 26.849-14.307 111.535-91.923 189.151z" />
+                                <path
+                                    d="M269.239 267.989c-78.105 78.104-163.187 119.656-190.035 92.807-26.849-26.848 14.703-111.93 92.807-190.035 78.105-78.104 163.187-119.656 190.035-92.807 26.849 26.848-14.703 111.93-92.807 190.035z" />
+                                <path
+                                    d="M252.887 252.52C175.27 330.138 90.584 371.294 63.736 344.446 36.887 317.596 78.043 232.91 155.66 155.293 233.276 77.677 317.962 36.521 344.81 63.37c26.85 26.848-14.307 111.534-91.923 189.15z" />
+                                <path
+                                    d="M236.977 236.61C161.069 312.52 77.867 352.389 51.14 325.663c-26.726-26.727 13.143-109.928 89.052-185.837 75.908-75.908 159.11-115.777 185.836-89.05 26.727 26.726-13.143 109.928-89.051 185.836z" />
+                                <path
+                                    d="M221.067 220.7C147.844 293.925 67.51 332.31 41.639 306.439c-25.873-25.873 12.513-106.206 85.736-179.429C200.6 53.786 280.931 15.4 306.804 41.272c25.872 25.873-12.514 106.206-85.737 179.429z" />
+                                <path
+                                    d="M205.157 204.79c-69.806 69.807-146.38 106.412-171.031 81.76-24.652-24.652 11.953-101.225 81.759-171.031 69.806-69.807 146.38-106.411 171.031-81.76 24.652 24.652-11.953 101.226-81.759 171.032z" />
+                                <path
+                                    d="M189.247 188.881c-65.169 65.169-136.696 99.3-159.762 76.235-23.065-23.065 11.066-94.593 76.235-159.762s136.697-99.3 159.762-76.235c23.065 23.065-11.066 94.593-76.235 159.762z" />
+                                <path
+                                    d="M173.337 172.971c-59.799 59.8-125.292 91.26-146.282 70.269-20.991-20.99 10.47-86.484 70.268-146.283 59.8-59.799 125.292-91.26 146.283-70.269 20.99 20.991-10.47 86.484-70.269 146.283z" />
+                                <path
+                                    d="M157.427 157.061c-53.209 53.21-111.578 81.108-130.372 62.314-18.794-18.794 9.104-77.164 62.313-130.373 53.21-53.209 111.58-81.108 130.373-62.314 18.794 18.794-9.105 77.164-62.314 130.373z" />
+                                <path
+                                    d="M141.517 141.151c-44.91 44.91-94.376 68.259-110.485 52.15-16.11-16.11 7.239-65.576 52.15-110.486 44.91-44.91 94.375-68.258 110.485-52.15 16.109 16.11-7.24 65.576-52.15 110.486z" />
+                                <path
+                                    d="M125.608 125.241c-35.88 35.88-75.255 54.677-87.947 41.985-12.692-12.692 6.105-52.067 41.985-87.947C115.525 43.4 154.9 24.603 167.592 37.295c12.692 12.692-6.105 52.067-41.984 87.946z" />
+                                <path
+                                    d="M109.698 109.332c-24.408 24.407-51.12 37.268-59.663 28.726-8.542-8.543 4.319-35.255 28.727-59.662 24.407-24.408 51.12-37.27 59.662-28.727 8.543 8.543-4.319 35.255-28.726 59.663z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--! FOOTER  -->
+    <footer>
+        <p>Develop with ❤ by Najam us Saqib</p>
+        <div class="social-icons">
+            <!-- <img src="assets/icons/behance.svg" title="Behance"> -->
+            <a href="mailto:saqibali24info@gmail.com"><img src="assets/icons/envelope-at-fill.svg"
+                    title="Instagram"></a>
+            <a href="https://www.facebook.com/infosaqib"><img src="assets/icons/facebook.svg" title="Facebook"></a>
+            <a href="https://www.github.com/infosaqib"><img src="assets/icons/github.svg" title="Github"></a>
+            <a href="https://www.linkedin.com/in/connectsaqib"><img src="assets/icons/linkedin.svg"
+                    title="LinkedIn"></a>
+            <a href="https://wa.me/+923021105464?text=Hey,%20I%20need%20your%20web%20development%20services!"><img
+                    src="assets/icons/whatsapp.svg" title="X"></a>
+            <!-- <img src="assets/icons/stack-overflow.svg" title="Stack overflow"> -->
+        </div>
+    </footer>
+    <script src="javascripts/data.js"></script>
+    <script src="javascripts/script.js"></script>
+    <script src="javascripts/btn.js"></script>
+
+</body>
+
+</html>

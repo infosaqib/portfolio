@@ -1,0 +1,280 @@
+@use "variables" as *;
+
+/*! Portfolio Styles */
+
+.portfolio_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  padding-block: 1rem;
+
+  h1 {
+    font-size: 3.5em;
+    margin-block: 10px;
+    text-align: left;
+    color: var(--dark-clr);
+  }
+
+  &_buttons {
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: row;
+    gap: 0 0.25em;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .portfolio_collection {
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    width: inherit;
+    width: calc(85vw - 10vw);
+
+    .port_card {
+      padding: 20px;
+      scale: 0.85;
+      display: flex;
+      flex-direction: column;
+      gap: 1em 0;
+      transition: all ease 0.4s;
+      cursor: pointer;
+      z-index: 1;
+      border: 2px solid var(--dark-clr);
+      background-color: var(--light-clr);
+      border-radius: 20px;
+
+      &_img {
+        position: relative;
+        width: 100%;
+        height: 19em;
+        &::before {
+          content: "";
+          inset: 0;
+          position: absolute;
+          animation: pulse 2.5s infinite;
+        }
+
+        &.loaded {
+          &::before {
+            content: none;
+          }
+          img {
+            opacity: 1;
+          }
+        }
+        img {
+          opacity: 0;
+          transition: opacity 200ms ease-in-out;
+          height: inherit;
+          width: inherit;
+          object-position: top;
+          object-fit: cover;
+          border-radius: 5px;
+          user-select: none;
+          -webkit-user-select: none;
+          /* user-drag: none; */
+          -webkit-user-drag: none;
+          outline: none;
+          pointer-events: none;
+        }
+      }
+      &_list {
+        ul {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+
+          li {
+            list-style: none;
+            background-color: var(--Xlight-grey);
+            color: var(--dark-clr);
+            padding: 5px 10px;
+            border-radius: 100px;
+            font-size: 0.8em;
+            font-weight: 600;
+          }
+        }
+      }
+      &_info {
+        display: flex;
+        flex-direction: column;
+        gap: 1em 0;
+
+        h2 {
+          font-size: 2em;
+          color: var(--dark-clr);
+        }
+        p {
+          font-size: 1.1em;
+          color: var(--dark-grey);
+        }
+      }
+      &_buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4em;
+        button {
+          background-color: var(--dark-clr);
+          color: var(--light-clr);
+          padding: 0.75em 1.5em;
+          font-size: 1em;
+          border-radius: 100px;
+          outline: none;
+          border: none;
+        }
+        /*
+ * Basic button style
+ */
+        .btn {
+          background-color: #dbdbdb;
+          border-color: #bbb;
+          color: #666;
+          box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5) inset;
+          border-radius: 3px;
+          border: 1px solid;
+          display: inline-block;
+          height: 18px;
+          line-height: 18px;
+          padding: 0 8px;
+          position: relative;
+          font-size: 12px;
+          text-decoration: none;
+          text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+          &:hover,
+          &.active {
+            text-shadow: 0 1px 0 #b12f27;
+            background-color: #f64136;
+            border-color: #b12f27;
+          }
+          &:active {
+            box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2) inset;
+          }
+          span {
+            color: #f64136;
+          }
+          &:hover,
+          &:hover span,
+          &.active,
+          &.active span {
+            color: #eeeeee;
+          }
+          &:active span {
+            color: #b12f27;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+          }
+        }
+        &-counter {
+          margin-right: 39px;
+
+          &:after,
+          &:hover:after {
+            text-shadow: none;
+          }
+          &:after {
+            border-radius: 3px;
+            border: 1px solid #d3d3d3;
+            background-color: #eee;
+            padding: 0 8px;
+            color: #777;
+            content: attr(data-count);
+            left: 100%;
+            margin-left: 8px;
+            margin-right: -13px;
+            position: absolute;
+            top: -1px;
+          }
+          &:before {
+            transform: rotate(45deg);
+            filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476, sizingMethod='auto expand');
+
+            background-color: #eee;
+            border: 1px solid #d3d3d3;
+            border-right: 0;
+            border-top: 0;
+            content: "";
+            position: absolute;
+            right: -13px;
+            top: 5px;
+            height: 6px;
+            width: 6px;
+            z-index: 1;
+            zoom: 1;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .portfolio_section {
+    h1 {
+      font-size: 2.5em;
+    }
+    &_buttons {
+      margin-block: 30px;
+      justify-content: center;
+
+      button {
+        background-color: #000;
+        color: #fff;
+        padding: 0.65em 1.25em;
+        font-size: 0.95em;
+      }
+    }
+    .portfolio_collection {
+      width: calc(85vw - 10px);
+
+      .port_card {
+        scale: 0.95;
+
+        p {
+          font-size: 0.85em;
+        }
+
+        &_info {
+          h2 {
+            font-size: 1.1em;
+          }
+        }
+
+        &_img {
+          height: 11em;
+        }
+        &_buttons {
+          gap: 0 1.5em;
+          button {
+            font-size: 0.85em;
+          }
+          svg {
+            width: 2.15em;
+            height: 2.15em;
+          }
+        }
+        &_list {
+          ul {
+            li {
+              font-size: 0.65em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// ? Animation
+@keyframes pulse {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
