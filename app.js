@@ -9,14 +9,6 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-//cors setup
-let cors = require("cors");
-app.use(cors({
-  origin: ['https://portfolio-seven-sepia-41.vercel.app/'],
-  methods: ['GET', 'POST'],
-  credentials: true
-}));
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
