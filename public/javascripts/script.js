@@ -164,10 +164,13 @@ let swiper1 = new Swiper(".testimonials_section_container", {
     400: {
       slidesPerView: 1,
     },
-    760: {
+    768: {
       slidesPerView: 2,
     },
     1024: {
+      slidesPerView: 2,
+    },
+    1400: {
       slidesPerView: 3,
     },
   },
