@@ -32,29 +32,11 @@ function toggleRootVariables() {
 
   applyValues(newValues);
 
-  // Store the current theme in localStorage
-  localStorage.setItem("theme", isDefault ? "default" : "alternate");
 }
 
-// Check for browser's dark mode preference and apply the appropriate theme
-function applyInitialTheme() {
-  const storedTheme = localStorage.getItem("theme");
-  
-  // Apply stored theme if exists
-  if (storedTheme) {
-    isDefault = storedTheme === "default";
-  } else {
-    // Apply browser's dark mode preference if no stored theme
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    isDefault = !prefersDarkScheme;
-  }
 
   const initialValues = isDefault ? defaultValues : alternateValues;
   applyValues(initialValues);
-}
-
-// Apply the initial theme on page load
-applyInitialTheme();
 
 
 //! Header
@@ -129,9 +111,7 @@ const generatePortCards = () => {
                 </div>
                 <div class="port_card_buttons">
                     <button >Live Preview</button>
-                   <p>
-  <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span></a>
-</p>
+                  
                 </div>
             </div>
     `;
