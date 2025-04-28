@@ -118,7 +118,7 @@
         flex-direction: row;
         align-items: center;
         gap: 4em;
-        button {
+        .port-button {
           background-color: var(--dark-clr);
           color: var(--light-clr);
           padding: 0.75em 1.5em;
@@ -126,6 +126,7 @@
           border-radius: 100px;
           outline: none;
           border: none;
+          text-decoration: none
         }
         /*
  * Basic button style
@@ -219,7 +220,7 @@
       margin-block: 30px;
       justify-content: center;
 
-      button {
+      .port-button {
         background-color: #000;
         color: #fff;
         padding: 0.65em 1.25em;
@@ -247,7 +248,7 @@
         }
         &_buttons {
           gap: 0 1.5em;
-          button {
+          .port-button {
             font-size: 0.85em;
           }
           svg {

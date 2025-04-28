@@ -35,8 +35,8 @@ function toggleRootVariables() {
 }
 
 
-  const initialValues = isDefault ? defaultValues : alternateValues;
-  applyValues(initialValues);
+const initialValues = isDefault ? defaultValues : alternateValues;
+applyValues(initialValues);
 
 
 //! Header
@@ -92,7 +92,7 @@ const portfolioGrid = document.querySelector(".portfolio_collection");
 const generatePortCards = () => {
   return (portfolioGrid.innerHTML = portfolioCards
     .map((x) => {
-      let { poster, image, tech, title, desc } = x;
+      let { poster, image, tech, title, url, desc } = x;
       return `
     <div class="swiper-slide port_card">
                 <div class="port_card_img" style="background: url(${poster}) no-repeat top;background-size: cover;">
@@ -100,17 +100,17 @@ const generatePortCards = () => {
                 </div>
                 <div class="port_card_list">
                     <ul>${tech
-                      .map((x) => {
-                        return `<li>${x}</li>`;
-                      })
-                      .join("")}</ul>
+          .map((x) => {
+            return `<li>${x}</li>`;
+          })
+          .join("")}</ul>
                 </div>
                 <div class="port_card_info">
                     <h2>${title}</h2>
                     <p>${desc}</p>
                 </div>
                 <div class="port_card_buttons">
-                    <button >Live Preview</button>
+                    <a target="_blank" class="port-button" href="${url}" >Live Preview</a>
                   
                 </div>
             </div>
@@ -190,50 +190,53 @@ let swiper2 = new Swiper(".portfolio_section_container", {
     clickable: true,
   },
   breakpoints: {
-    700: {
-      slidesPerView: 2,
-    },
-    1400: {
+
+    768: {
       slidesPerView: 1,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 50,
     },
   },
 });
 
 //! Images Optimization
-document.addEventListener('DOMContentLoaded', ()=>{
+document.addEventListener('DOMContentLoaded', () => {
 
   //?Portfolio Section
- let portDivs = document.querySelectorAll(".port_card_img");
-  
-
-portDivs.forEach((div) => {
-  const img = div.querySelector("img");
-
-  function loaded() {
-    //show image
-    div.classList.add("loaded");
-  }
-
-  if (img.complete) {
-    loaded();
-  } else {
-    img.addEventListener("load", loaded);
-  }
-});
+  let portDivs = document.querySelectorAll(".port_card_img");
 
 
-  //?Testimonials Section
-  let testDivs = document.querySelectorAll(".testimonials_card_img");
-  
-
-  testDivs.forEach((div) => {
+  portDivs.forEach((div) => {
     const img = div.querySelector("img");
-  
+
     function loaded() {
       //show image
       div.classList.add("loaded");
     }
-  
+
+    if (img.complete) {
+      loaded();
+    } else {
+      img.addEventListener("load", loaded);
+    }
+  });
+
+
+  //?Testimonials Section
+  let testDivs = document.querySelectorAll(".testimonials_card_img");
+
+
+  testDivs.forEach((div) => {
+    const img = div.querySelector("img");
+
+    function loaded() {
+      //show image
+      div.classList.add("loaded");
+    }
+
     if (img.complete) {
       loaded();
     } else {

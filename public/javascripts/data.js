@@ -49,49 +49,49 @@ const portfolioCards = [
         image: "assets/projects/cuberto.png",
         tech: ["HTML", "SCSS", "JavaScript"],
         title: "Cuberto clone",
-        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam architecto accusantium, explicabo, soluta recusandae nemo veniam nam iste vero voluptas alias repudiandae rerum. Vero tempore aperiam illum animi possimus nisi."
+        url: "https://cuberto-phi.vercel.app/",
+        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam architecto accusantium, explicabo, soluta recusandae nemo veniam nam iste vero voluptas alias repudiandae rerum."
     },
     {
         poster: "assets/projects/portfolio-small.png",
         image: "assets/projects/portfolio.webp",
         tech: ["HTML", "SCSS", "JavaScript"],
         title: "Portfolio Website",
-        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam architecto accusantium, explicabo, soluta recusandae nemo veniam nam iste vero voluptas alias repudiandae rerum. Vero tempore aperiam illum animi possimus nisi."
+        url: "https://infosaqib.github.io/portfolio-2.0/",
+        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam architecto accusantium, explicabo, soluta recusandae nemo veniam nam iste vero voluptas alias repudiandae rerum."
     },
     {
         poster: "assets/projects/Easybank-small.png",
         image: "assets/projects/Easybank.png",
         tech: ["HTML", "CSS", "JavaScript"],
-        title: "Easybank Landing Page",
-        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam architecto accusantium, explicabo, soluta recusandae nemo veniam nam iste vero voluptas alias repudiandae rerum. Vero tempore aperiam illum animi possimus nisi."
+        title: "Easybank Page",
+        url: "https://infosaqib.github.io/Easybank-Landing-page/",
+        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam architecto accusantium, explicabo, soluta recusandae nemo veniam nam iste vero voluptas alias repudiandae rerum."
     },
     {
         poster: "assets/projects/shopping-small.png",
         image: "assets/projects/shopping.png",
         tech: ["HTML", "SCSS", "JavaScript"],
         title: "Shopping Cart",
-        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam architecto accusantium, explicabo, soluta recusandae nemo veniam nam iste vero voluptas alias repudiandae rerum. Vero tempore aperiam illum animi possimus nisi."
+        url: "https://shopping-cart-five-rose.vercel.app/",
+        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam architecto accusantium, explicabo, soluta recusandae nemo veniam nam iste vero voluptas alias repudiandae rerum."
     },
     {
         poster: "assets/projects/Army-small.png",
         image: "assets/projects/Army.png",
         tech: ["HTML", "Tailwind", "JavaScript"],
         title: "Dog Center",
-        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam architecto accusantium, explicabo, soluta recusandae nemo veniam nam iste vero voluptas alias repudiandae rerum. Vero tempore aperiam illum animi possimus nisi."
+        url: "www.armydogcenterpk.com",
+        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam architecto accusantium, explicabo, soluta recusandae nemo veniam nam iste vero voluptas alias repudiandae rerum."
     },
+ 
     {
-        poster: "assets/projects/Ecommerce-small.png",
-        image: "assets/projects/Ecommerce.png",
-        tech: ["HTML", "Tailwind", "JavaScript"],
-        title: "Ecommerce Landing Page",
-        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam architecto accusantium, explicabo, soluta recusandae nemo veniam nam iste vero voluptas alias repudiandae rerum. Vero tempore aperiam illum animi possimus nisi."
-    },
-    {
-        poster: "assets/projects/furniture-small.png",
-        image: "assets/projects/furniture.webp",
-        tech: ["HTML", "PHP", "CSS", "JavaScript"],
-        title: "Furniture Website",
-        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam architecto accusantium, explicabo, soluta recusandae nemo veniam nam iste vero voluptas alias repudiandae rerum. Vero tempore aperiam illum animi possimus nisi."
+        poster: "assets/projects/firework-small.png",
+        image: "assets/projects/firework.png",
+        tech: ["HTML", "PHP", "MySQL", "JavaScript"],
+        title: "SS FireWork",
+        url: "https://ssfireworks.in/product-list/",
+        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam architecto accusantium, explicabo, soluta recusandae nemo veniam nam iste vero voluptas alias repudiandae rerum."
     },
 
 ]
