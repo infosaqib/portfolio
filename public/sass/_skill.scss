@@ -3,7 +3,8 @@
 
 .skills_section {
   margin-block: 2.5em;
-    &_head {
+  &_head {
+      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -26,7 +27,6 @@
         line-height: 1.6em;
         font-weight: 500;
         color: var(--dark-grey);
-        width: 35em;
         text-align: center;
       }
       h5:last-child{

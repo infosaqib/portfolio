@@ -32,14 +32,14 @@ $shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 //Media Queries
 
 $breakpoints-up: (
-  "small": 23.4375em,
   //375px
-  "medium": 48em,
+  "small": 23.4375em,
   //768px
-  "large": 64em,
+  "medium": 48em,
   //1024ppx
-  "xlarge": 90em,
+  "large": 64em,
   //1440px
+  "xlarge": 90em,
 );
 
 @mixin breakpoint($size) {
